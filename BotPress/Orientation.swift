@@ -8,5 +8,5 @@
 import Foundation
 
 enum Orientation {
-    case north, east, south, west
+    case n, ne, e, se, s, sw, w, nw
 }

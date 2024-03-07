@@ -27,18 +27,51 @@ func buildLine(_ length: Int, origin: Point, orientation: Orientation) {
     points.append(origin)
     
     switch orientation {
-    case .north:
+    case .n:
         for i in 1...length {
             points.append(Point(x: origin.x, y: origin.y - i))
         }
-    default:
-        print("")
+        
+    case .ne:
+        for i in 1...length {
+            points.append(Point(x: origin.x + i, y: origin.y - i))
+        }
+        
+    case .e:
+        for i in 1...length {
+            points.append(Point(x: origin.x + i, y: origin.y))
+        }
+        
+    case .se:
+        for i in 1...length {
+            points.append(Point(x: origin.x + i, y: origin.y + i))
+        }
+        
+    case .s:
+        for i in 1...length {
+            points.append(Point(x: origin.x, y: origin.y + i))
+        }
+        
+    case .sw:
+        for i in 1...length {
+            points.append(Point(x: origin.x - i, y: origin.y + i))
+        }
+        
+    case .w:
+        for i in 1...length {
+            points.append(Point(x: origin.x - i, y: origin.y))
+        }
+        
+    case .nw:
+        for i in 1...length {
+            points.append(Point(x: origin.x - i, y: origin.y - i))
+        }
     }
     
     displayGrid(points)
     
 }
 
-buildLine(5, origin: Point(x: 5, y: 5), orientation: .north)
+buildLine(5, origin: Point(x: 5, y: 5), orientation: .nw)
 
 
