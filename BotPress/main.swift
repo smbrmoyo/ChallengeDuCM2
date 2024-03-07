@@ -7,57 +7,38 @@
 
 import Foundation
 
-func displayLines(_ length: Int, orientation: Orientation) {
-    for _ in 0..<length {
-        
+func displayGrid(_ points: [Point]) {
+    for i in 0..<25 {
+        for j in 0..<25 {
+            if points.contains(where: { $0 == Point(x: j, y: i) }) {
+                print("x ", terminator: "")
+            } else {
+                print(". ", terminator: "")
+            }
+        }
+        print(".")
     }
+    print()
+}
+
+func buildLine(_ length: Int, origin: Point, orientation: Orientation) {
+    var points: [Point] = []
+    
+    points.append(origin)
     
     switch orientation {
     case .north:
-        for _ in 0..<length {
-            print("|")
+        for i in 1...length {
+            points.append(Point(x: origin.x, y: origin.y - i))
         }
-    case .east:
-        for _ in 0..<length {
-            print("-", terminator: "")
-        }
-    case .south:
-        for _ in 0..<length {
-            print("|")
-        }
-    case .west:
-        for _ in 0..<length {
-            print("-", terminator: "")
-        }
-    }
-}
-
-func drawLine(_ length: Int, originX: Int, originY: Int) {
-    for segment in 0..<originY {
-        if segment != originY-1 {
-            print()
-        } else {
-            print("", terminator: "")
-        }
+    default:
+        print("")
     }
     
-    for i in 0..<length {
-        for _ in 0..<originX + (i * 2) {
-            print(" ", terminator: "")
-        }
-        print(".")
-    }
-    print()
+    displayGrid(points)
+    
 }
 
-func displayGrid(_ length: Int) {
-    for _ in 0..<length {
-        for _ in 0..<length {
-            print(". ", terminator: "")
-        }
-        print(".")
-    }
-    print()
-}
+buildLine(5, origin: Point(x: 5, y: 5), orientation: .north)
 
-displayGrid(25)
+

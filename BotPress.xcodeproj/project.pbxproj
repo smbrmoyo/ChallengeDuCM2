@@ -10,6 +10,7 @@
 		041E6BD22B9A508200A43196 /* main.swift in Sources */ = {isa = PBXBuildFile; fileRef = 041E6BD12B9A508200A43196 /* main.swift */; };
 		041E6BD92B9A509400A43196 /* Orientation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 041E6BD82B9A509400A43196 /* Orientation.swift */; };
 		041E6BDB2B9A565D00A43196 /* Line.swift in Sources */ = {isa = PBXBuildFile; fileRef = 041E6BDA2B9A565D00A43196 /* Line.swift */; };
+		041E6BDE2B9A6B9000A43196 /* Point.swift in Sources */ = {isa = PBXBuildFile; fileRef = 041E6BDD2B9A6B9000A43196 /* Point.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -30,6 +31,7 @@
 		041E6BD82B9A509400A43196 /* Orientation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Orientation.swift; sourceTree = "<group>"; };
 		041E6BDA2B9A565D00A43196 /* Line.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Line.swift; sourceTree = "<group>"; };
 		041E6BDC2B9A688C00A43196 /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
+		041E6BDD2B9A6B9000A43196 /* Point.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Point.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -66,6 +68,7 @@
 				041E6BD12B9A508200A43196 /* main.swift */,
 				041E6BD82B9A509400A43196 /* Orientation.swift */,
 				041E6BDA2B9A565D00A43196 /* Line.swift */,
+				041E6BDD2B9A6B9000A43196 /* Point.swift */,
 			);
 			path = BotPress;
 			sourceTree = "<group>";
@@ -128,6 +131,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				041E6BDE2B9A6B9000A43196 /* Point.swift in Sources */,
 				041E6BDB2B9A565D00A43196 /* Line.swift in Sources */,
 				041E6BD92B9A509400A43196 /* Orientation.swift in Sources */,
 				041E6BD22B9A508200A43196 /* main.swift in Sources */,
